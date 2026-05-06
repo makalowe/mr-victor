@@ -1,21 +1,10 @@
-# Project Brief
-
-## Nom du projet
+# Project Brief — MR VICTOR
 
 ## Mission
+Expert en mise en conformite electrique RGIE Wallonie & Bruxelles
 
-## Public cible
+## Stack technique
+Flask + HTML/CSS natif + Formspree + Netlify
 
-## Probleme principal a resoudre
-
-## Proposition de valeur
-
-## Objectifs 90 jours
-1.
-2.
-3.
-
-## KPI principaux
-1.
-2.
-3.
+## Etat actuel
+Site one-page operationnel, attente deploiement Netlify
