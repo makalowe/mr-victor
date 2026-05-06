@@ -1,0 +1,29 @@
+
+### Ce qu’il vous faut dans Obsidian
+- Plugin **Dataview** (pour les requêtes)
+- Plugin **Tasks** (pour les listes de tâches taguées)
+- Une convention : chaque projet a une note avec des métadonnées (`--- statut: en cours ---`, `priorite: haute`, etc.) et des tâches `- [ ]`.
+
+---
+
+## 📡 2. Surveillance des services (uptime)
+
+Pour surveiller que vos sites sont bien accessibles (une fois déployés), installez **Uptime Kuma** (gratuit, open source) sur un petit VPS (voire sur votre machine locale si elle reste allumée).  
+
+Il vous donne un dashboard web avec :
+- statut des services (vert/rouge)
+- historique des pannes
+- alertes par email (via votre Emailer)
+
+### Exemple d’installation (Docker)
+
+```yaml
+version: '3'
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./uptime-kuma-data:/app/data
