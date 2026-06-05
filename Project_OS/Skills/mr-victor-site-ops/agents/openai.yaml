@@ -1,0 +1,4 @@
+interface:
+  display_name: "MR VICTOR Site Ops"
+  short_description: "Publier et sauvegarder le site MR VICTOR."
+  default_prompt: "Utilise cette skill pour maintenir, publier ou sauvegarder le site MR VICTOR."
