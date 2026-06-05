@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" role="img" aria-labelledby="title desc">
+  <title id="title">MR VICTOR</title>
+  <desc id="desc">Logo MR VICTOR Electricite RGIE avec maison, eclair et validation.</desc>
+  <defs>
+    <style>
+      .ink { fill: #171819; }
+      .gold { fill: #f6bf26; }
+      .line { fill: none; stroke: #171819; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+      .word { font-family: Arial, Helvetica, sans-serif; font-weight: 900; letter-spacing: 2px; }
+      .sub { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 8px; }
+    </style>
+  </defs>
+  <path class="line" d="M24 64 L74 24 L124 64 V112 L74 136 L24 112 Z"/>
+  <path class="line" d="M42 86 L65 109 L113 58"/>
+  <path class="gold" d="M78 38 L54 83 H75 L63 121 L106 66 H83 L98 38 Z"/>
+  <text class="word ink" x="160" y="78" font-size="48">MR VICTOR</text>
+  <rect class="gold" x="162" y="100" width="72" height="6" rx="3"/>
+  <text class="sub ink" x="254" y="111" font-size="18">ELECTRICITE RGIE</text>
+  <rect class="gold" x="480" y="100" width="54" height="6" rx="3"/>
+</svg>

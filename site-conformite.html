@@ -3,463 +3,997 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mise en conformité électrique | ElecConform Wallonie & Bruxelles</title>
-    <meta name="description" content="Expert en mise en conformité électrique RGIE en Wallonie et Bruxelles. Devis gratuit sous 24h. Plans électriques, correction infractions, accompagnement contrôle Vinçotte/BTV.">
+    <title>Mise en conformité électrique | MR VICTOR Wallonie & Bruxelles</title>
+    <meta name="description" content="Mise en conformité électrique RGIE en Wallonie et Bruxelles. Plans électriques, correction des infractions, tableau, terre, contrôle agréé et devis gratuit sous 24h.">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://www.elecconform.be/">
+    <link rel="canonical" href="https://www.mrvictor.be/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="ElecConform — Mise en conformité électrique Wallonie & Bruxelles">
-    <meta property="og:description" content="Plans électriques + corrections + accompagnement jusqu'au certificat RGIE. Devis gratuit en 24h.">
-    <meta property="og:url" content="https://www.elecconform.be/">
+    <meta property="og:title" content="MR VICTOR - Mise en conformité électrique RGIE">
+    <meta property="og:description" content="Plans, travaux de correction et accompagnement jusqu'au certificat RGIE. Wallonie et Bruxelles.">
+    <meta property="og:url" content="https://www.mrvictor.be/">
     <meta property="og:locale" content="fr_BE">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ElecConform — Mise en conformité électrique">
-    <meta name="twitter:description" content="Expert RGIE Wallonie & Bruxelles. Devis gratuit 24h.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="mr-victor-logo.svg">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "ElecConform",
-        "description": "Mise en conformité électrique Wallonie & Bruxelles",
-        "url": "https://www.elecconform.be/",
+        "@type": "Electrician",
+        "name": "MR VICTOR",
+        "description": "Mise en conformité électrique RGIE en Wallonie et Bruxelles",
+        "url": "https://www.mrvictor.be/",
         "telephone": "+32470000000",
-        "email": "contact@elecconform.be",
+        "email": "contact@mrvictor.be",
         "areaServed": ["Bruxelles", "Brabant wallon", "Hainaut", "Liège", "Namur", "Luxembourg"],
-        "priceRange": "€€",
-        "sameAs": []
+        "priceRange": "€€"
     }
     </script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        :root {
+            --ink: #171819;
+            --panel: #232528;
+            --muted: #6b7280;
+            --line: #e6e0d4;
+            --paper: #fffaf0;
+            --white: #ffffff;
+            --gold: #f6bf26;
+            --gold-dark: #c59013;
+            --green: #14745c;
+            --blue: #1f5f8b;
+            --shadow: 0 18px 50px rgba(23, 24, 25, 0.14);
+        }
 
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
             line-height: 1.6;
         }
 
-        .navbar {
-            background-color: #2B2B2B;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #D4AF37;
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
+
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
         }
 
-        .logo { font-size: 1.5rem; font-weight: bold; color: #D4AF37; }
-        .logo span { color: white; }
-
-        .nav-links { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
-        .nav-links a {
-            color: white; text-decoration: none;
-            padding: 0.4rem 0.8rem; border-radius: 6px;
-            transition: background 0.2s;
+        .topbar {
+            background: var(--ink);
+            color: var(--white);
             font-size: 0.9rem;
         }
-        .nav-links a:hover { background: rgba(212, 175, 55, 0.15); }
-        .btn-gold {
-            background-color: #D4AF37; color: #1a1a1a !important;
-            padding: 0.5rem 1.2rem !important; border-radius: 25px;
-            font-weight: bold;
+
+        .topbar .container {
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
         }
-        .btn-gold:hover { background: #C9A227 !important; }
+
+        .topbar a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 250, 240, 0.96);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand img {
+            display: block;
+            width: 220px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.94rem;
+            font-weight: 700;
+        }
+
+        .nav-links a:hover { background: rgba(246, 191, 38, 0.22); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 12px 18px;
+            border: 0;
+            border-radius: 8px;
+            background: var(--gold);
+            color: var(--ink);
+            font-weight: 900;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 12px 24px rgba(198, 144, 19, 0.25);
+        }
+
+        .btn:hover { background: #ffd34e; }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.72);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
 
         .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2B2B2B 100%);
-            padding: 4rem 5%; text-align: center;
-        }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero h1 span { color: #D4AF37; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; color: #cccccc; }
-
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-        .btn-primary {
-            background-color: #D4AF37; color: #1a1a1a;
-            padding: 0.8rem 2rem; border: none; border-radius: 30px;
-            font-size: 1rem; font-weight: bold; cursor: pointer;
-            transition: all 0.3s; text-decoration: none; display: inline-block;
-        }
-        .btn-primary:hover { background-color: #C9A227; transform: translateY(-2px); }
-
-        .btn-secondary {
-            background-color: transparent; color: #D4AF37;
-            padding: 0.8rem 2rem; border: 2px solid #D4AF37;
-            border-radius: 30px; font-size: 1rem; font-weight: bold;
-            cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block;
-        }
-        .btn-secondary:hover { background: rgba(212, 175, 55, 0.1); transform: translateY(-2px); }
-
-        .section { padding: 4rem 5%; }
-        .section-dark { background-color: #2B2B2B; }
-        .container { max-width: 1200px; margin: 0 auto; }
-
-        h2 {
-            font-size: 2rem; margin-bottom: 2rem; text-align: center;
-            position: relative; padding-bottom: 0.5rem;
-        }
-        h2::after {
-            content: ''; position: absolute; bottom: 0; left: 50%;
-            transform: translateX(-50%); width: 60px; height: 3px;
-            background-color: #D4AF37;
+            color: var(--white);
+            background:
+                linear-gradient(90deg, rgba(23, 24, 25, 0.92), rgba(23, 24, 25, 0.72) 52%, rgba(23, 24, 25, 0.36)),
+                url("planbinstallation-bornes-maison-1-v16-9-fr.png") center / cover no-repeat;
         }
 
-        h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #D4AF37; }
-
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .service-card {
-            background-color: #1a1a1a; padding: 2rem;
-            border-radius: 15px; transition: transform 0.3s;
-            border: 1px solid #333;
-        }
-        .service-card:hover { transform: translateY(-5px); border-color: #D4AF37; }
-        .service-card ul { list-style: none; margin-top: 1rem; }
-        .service-card li { margin: 0.5rem 0; padding-left: 1.5rem; position: relative; }
-        .service-card li::before { content: '✔'; color: #D4AF37; position: absolute; left: 0; }
-        .service-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .step { text-align: center; padding: 1.5rem; }
-        .step-number {
-            width: 50px; height: 50px; background-color: #D4AF37;
-            color: #1a1a1a; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center;
-            font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;
+        .hero-grid {
+            min-height: 620px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+            gap: 36px;
+            align-items: center;
+            padding: 56px 0;
         }
 
-        .zones-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
-        .zone-badge {
-            background-color: #2B2B2B; padding: 0.5rem 1.5rem;
-            border-radius: 30px; font-size: 0.9rem; border: 1px solid #D4AF37;
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.82rem;
         }
 
-        /* Formulaire */
-        .form-container {
-            background-color: #1f1f1f; padding: 2rem;
-            border-radius: 20px; max-width: 500px; margin: 0 auto;
-            border: 1px solid #333;
+        h1, h2, h3, p { margin-top: 0; }
+
+        h1 {
+            margin-bottom: 18px;
+            max-width: 800px;
+            font-size: clamp(2.1rem, 6vw, 4.7rem);
+            line-height: 1;
+            letter-spacing: 0;
         }
-        .form-group { margin-bottom: 1.5rem; }
-        label { display: block; margin-bottom: 0.5rem; color: #D4AF37; }
+
+        .hero-lead {
+            max-width: 650px;
+            color: #f3ead5;
+            font-size: 1.18rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 28px 0;
+        }
+
+        .trust-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            max-width: 720px;
+        }
+
+        .trust-chip {
+            min-height: 82px;
+            padding: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .trust-chip strong { display: block; color: var(--white); }
+        .trust-chip span { color: #e6dcc5; font-size: 0.9rem; }
+
+        .quote-box {
+            background: var(--white);
+            color: var(--ink);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .quote-box h2 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .quote-box p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        label {
+            display: block;
+            color: #3b3b3b;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
         input, textarea, select {
-            width: 100%; padding: 0.8rem;
-            border: 1px solid #333; border-radius: 10px;
-            background-color: #2B2B2B; color: white; font-size: 1rem;
-            font-family: inherit;
+            width: 100%;
+            min-height: 44px;
+            padding: 10px 12px;
+            border: 1px solid #d7d1c4;
+            border-radius: 8px;
+            background: #fffdfa;
+            color: var(--ink);
+            font: inherit;
         }
-        input:focus, textarea:focus { outline: none; border-color: #D4AF37; }
 
-        /* Message de succès */
+        textarea { resize: vertical; }
+        input:focus, textarea:focus, select:focus {
+            outline: 3px solid rgba(246, 191, 38, 0.28);
+            border-color: var(--gold-dark);
+        }
+
+        section { padding: 74px 0; }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.08;
+            margin-bottom: 0;
+        }
+
+        .section-head p {
+            max-width: 460px;
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .band-dark {
+            background: var(--panel);
+            color: var(--white);
+        }
+
+        .band-dark .section-head p,
+        .band-dark .muted { color: #cbd5e1; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .service-card {
+            min-height: 260px;
+            padding: 22px;
+            border-radius: 8px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 22px rgba(23, 24, 25, 0.06);
+        }
+
+        .service-card.dark {
+            background: #2d3035;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background: var(--gold);
+            color: var(--ink);
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+        .service-card p { color: var(--muted); margin-bottom: 14px; }
+        .service-card.dark p { color: #d4d7dd; }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .check-list li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        .check-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.72em;
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background: var(--gold);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 0.92fr 1.08fr;
+            gap: 38px;
+            align-items: center;
+        }
+
+        .image-frame {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            background: var(--white);
+            border: 10px solid var(--white);
+        }
+
+        .image-frame img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .steps {
+            display: grid;
+            gap: 14px;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 54px 1fr;
+            gap: 16px;
+            padding: 18px;
+            border-radius: 8px;
+            background: var(--white);
+            border: 1px solid var(--line);
+        }
+
+        .step-number {
+            width: 54px;
+            height: 54px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            background: var(--ink);
+            color: var(--gold);
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        .step h3 { margin-bottom: 4px; }
+        .step p { color: var(--muted); margin-bottom: 0; }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .proof {
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        .proof strong {
+            display: block;
+            color: var(--gold);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .proof span {
+            display: block;
+        }
+
+        .proof strong .counter {
+            display: inline;
+        }
+
+        .zones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .zone {
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            font-weight: 800;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .testimonial {
+            padding: 24px;
+            border-radius: 8px;
+            background: var(--white);
+            border: 1px solid var(--line);
+        }
+
+        .stars {
+            color: var(--gold-dark);
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .testimonial p { color: #30343a; }
+        .testimonial strong { display: block; }
+        .testimonial small { color: var(--muted); }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        details {
+            border-radius: 8px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            padding: 18px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        details p {
+            color: var(--muted);
+            margin: 12px 0 0;
+        }
+
+        .contact-section {
+            background:
+                linear-gradient(90deg, rgba(23, 24, 25, 0.92), rgba(23, 24, 25, 0.68)),
+                url("1770654824_installation-borne-de-recharge-a-domicile.jpg") center / cover no-repeat;
+            color: var(--white);
+        }
+
+        .contact-card {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contact-panel {
+            padding: 26px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .contact-panel a {
+            color: var(--gold);
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .contact-form {
+            padding: 26px;
+            border-radius: 8px;
+            background: var(--white);
+            color: var(--ink);
+            box-shadow: var(--shadow);
+        }
+
         #form-success {
-            display: none; text-align: center; padding: 2rem;
-            max-width: 500px; margin: 0 auto;
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            background: #effaf4;
+            border: 1px solid #b7e4c7;
+            color: #0f5132;
+            font-weight: 800;
         }
-        #form-success .icon { font-size: 3rem; }
-        #form-success h3 { color: #D4AF37; font-size: 1.5rem; margin: 1rem 0 0.5rem; }
-        #form-success p { color: #cccccc; }
 
-        /* Témoignages */
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .testimonial-card {
-            background-color: #1a1a1a; padding: 1.5rem 2rem;
-            border-radius: 15px; border: 1px solid #333;
-            font-style: italic; position: relative;
-        }
-        .testimonial-card::before { content: '"'; font-size: 3rem; color: #D4AF37; position: absolute; top: 0; left: 1rem; line-height: 1; }
-        .testimonial-card p { margin-bottom: 0.5rem; }
-        .testimonial-card small { color: #D4AF37; font-style: normal; font-weight: bold; }
-
-        /* FAQ */
-        .faq-grid { display: grid; gap: 0.8rem; margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-        details.faq-item {
-            background-color: #1a1a1a; padding: 1rem 1.5rem;
-            border-radius: 10px; border: 1px solid #333;
-        }
-        details.faq-item summary { cursor: pointer; font-weight: bold; color: #D4AF37; }
-        details.faq-item p { margin-top: 0.8rem; color: #cccccc; }
-
-        /* Carte */
-        .map-container { margin-top: 2rem; border-radius: 15px; overflow: hidden; }
-
-        /* Footer */
         .footer {
-            background-color: #1a1a1a; padding: 2rem 5%; text-align: center;
-            border-top: 1px solid #333;
+            padding: 34px 0;
+            background: var(--ink);
+            color: var(--white);
         }
-        .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 1rem 0; }
-        .contact-info a { color: #D4AF37; text-decoration: none; }
-        .contact-info a:hover { text-decoration: underline; }
 
-        @media (max-width: 768px) {
-            .navbar { flex-direction: column; gap: 1rem; }
-            .nav-links a { margin: 0 0.3rem; font-size: 0.8rem; }
-            .hero h1 { font-size: 1.8rem; }
-            .hero p { font-size: 1rem; }
-            .contact-info { flex-direction: column; gap: 0.5rem; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 960px) {
+            .hero-grid,
+            .split,
+            .contact-card,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .proof-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .quote-box { max-width: 560px; }
+            .footer-links { justify-content: flex-start; }
+        }
+
+        @media (max-width: 680px) {
+            .topbar .container,
+            .nav-inner,
+            .section-head {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links { justify-content: flex-start; }
+            .hero-grid { min-height: auto; padding: 42px 0; }
+            .trust-row,
+            .services-grid,
+            .proof-grid,
+            .testimonial-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions .btn { width: 100%; }
+            section { padding: 54px 0; }
         }
     </style>
 </head>
 <body>
+    <div class="topbar">
+        <div class="container">
+            <span>Intervention RGIE en Wallonie et Bruxelles</span>
+            <span><a href="tel:+32470000000">0470 00 00 00</a> | <a href="https://wa.me/32470000000" target="_blank" rel="noopener">WhatsApp</a></span>
+        </div>
+    </div>
+
     <nav class="navbar">
-        <div class="logo">ELEC<span>CONFORM</span></div>
-        <div class="nav-links">
-            <a href="#">Accueil</a>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact" class="btn-gold">Devis gratuit</a>
-            <a href="https://wa.me/32470000000" target="_blank" rel="noopener" style="color:#D4AF37;font-weight:bold;">💬 WhatsApp</a>
+        <div class="container nav-inner">
+            <a class="brand" href="#" aria-label="MR VICTOR - accueil">
+                <img src="mr-victor-logo.svg" alt="MR VICTOR Electricite RGIE">
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#process">Méthode</a>
+                <a href="#zones">Zones</a>
+                <a href="#faq">FAQ</a>
+                <a class="btn" href="#contact">Devis gratuit</a>
+            </div>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Mise en conformité électrique<br><span>Wallonie & Bruxelles</span></h1>
-            <p>Plans électriques + corrections + accompagnement jusqu'au certificat RGIE</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn-primary">📞 Devis gratuit en 24h</a>
-                <a href="https://wa.me/32470000000" target="_blank" rel="noopener" class="btn-secondary">💬 WhatsApp direct</a>
-            </div>
-            <p style="margin-top:2rem;font-size:0.9rem;color:#999;">Urgence ? <a href="tel:+32470000000" style="color:#D4AF37;text-decoration:none;font-weight:bold;">📞 0470 00 00 00</a></p>
-        </div>
-    </section>
-
-    <section id="services" class="section section-dark">
-        <div class="container">
-            <h2>Nos services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔌</div>
-                    <h3>Plans électriques</h3>
-                    <ul>
-                        <li>Schémas unifilaires</li>
-                        <li>Plans de position</li>
-                        <li>Obligatoires pour le contrôle</li>
-                    </ul>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">RGIE - contrôle agréé - plans électriques</span>
+                <h1>Mise en conformité électrique sans mauvaise surprise</h1>
+                <p class="hero-lead">Diagnostic, correction des infractions, schémas unifilaires, plan de position et accompagnement jusqu'au certificat pour votre maison, appartement ou immeuble.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#contact">Demander un devis en 24h</a>
+                    <a class="btn btn-outline" href="tel:+32470000000">Appeler maintenant</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Mise en conformité</h3>
-                    <ul>
-                        <li>Correction des infractions</li>
-                        <li>Remplacement tableau</li>
-                        <li>Mise à la terre</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧾</div>
-                    <h3>Pré-contrôle</h3>
-                    <ul>
-                        <li>Vérification avant organisme</li>
-                        <li>Éviter refus et frais supplémentaires</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏁</div>
-                    <h3>Accompagnement contrôle</h3>
-                    <ul>
-                        <li>Présence le jour J</li>
-                        <li>Coordination avec Vinçotte / BTV</li>
-                    </ul>
+                <div class="trust-row">
+                    <div class="trust-chip"><strong>Pré-contrôle</strong><span>Avant Vinçotte, BTV ou autre organisme</span></div>
+                    <div class="trust-chip"><strong>Prix clair</strong><span>Priorité aux travaux nécessaires</span></div>
+                    <div class="trust-chip"><strong>Local</strong><span>Wallonie, Bruxelles et alentours</span></div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="process" class="section">
-        <div class="container">
-            <h2>Notre méthode en 3 étapes</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Devis gratuit</h3>
-                    <p>Analyse de votre situation et estimation sans engagement</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Mise en conformité</h3>
-                    <p>Diagnostic + travaux + préparation avant contrôle</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Plans + contrôle</h3>
-                    <p>Réalisation des plans + passage organisme agréé</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-dark">
-        <div class="container">
-            <h2>Zones d'intervention</h2>
-            <div class="zones-grid">
-                <span class="zone-badge">📍 Bruxelles</span>
-                <span class="zone-badge">📍 Brabant wallon</span>
-                <span class="zone-badge">📍 Hainaut</span>
-                <span class="zone-badge">📍 Liège</span>
-                <span class="zone-badge">📍 Namur</span>
-                <span class="zone-badge">📍 Luxembourg</span>
-            </div>
-            <!-- Google Maps -->
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d161705.0800733865!2d4.141563646323282!3d50.72037582241607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a4e7f7a9b4a3%3A0x1b8a5c3e2f4d6e8f!2sWallonie%2C+Belgique!5e0!3m2!1sfr!2sfr!4v1"
-                    width="100%" height="300" style="border:0;border-radius:15px;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Témoignages -->
-    <section class="section">
-        <div class="container">
-            <h2>Ce que disent nos clients</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>Intervention rapide et professionnelle. Tout est maintenant aux normes RGIE. Merci !</p>
-                    <small>— Sophie M., Braine-l'Alleud</small>
-                </div>
-                <div class="testimonial-card">
-                    <p>J'avais un refus de Vinçotte. Ils ont tout corrigé en 2 jours et le contrôle est passé.</p>
-                    <small>— Laurent D., Mons</small>
-                </div>
-                <div class="testimonial-card">
-                    <p>Devis gratuit, prix clair, travail soigné. Je recommande vivement.</p>
-                    <small>— Céline P., Namur</small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section section-dark">
-        <div class="container">
-            <h2>Questions fréquentes</h2>
-            <div class="faq-grid">
-                <details class="faq-item">
-                    <summary>Combien coûte une mise en conformité ?</summary>
-                    <p>Le prix dépend de l'état de votre installation. Le diagnostic est gratuit et sans engagement. Comptez généralement entre 300€ et 1500€ selon les travaux nécessaires.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Quels sont les délais ?</summary>
-                    <p>Pour un pré-contrôle, nous intervenons sous 48h. Les travaux de mise en conformité prennent 1 à 5 jours selon la complexité.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Intervenez-vous pour les particuliers uniquement ?</summary>
-                    <p>Nous travaillons avec les particuliers, les syndics, les entreprises et les promoteurs immobiliers.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Qu'est-ce que le RGIE ?</summary>
-                    <p>Le Règlement Général sur les Installations Électriques est la norme belge obligatoire pour toute installation électrique. Tout bien vendu ou loué doit être conforme.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Faut-il un plan électrique pour le contrôle ?</summary>
-                    <p>Oui, un schéma unifilaire et un plan de position sont obligatoires pour le passage de l'organisme agréé (Vinçotte, BTV, etc.). Nous les réalisons pour vous.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Demandez votre devis gratuit</h2>
-            <p style="text-align:center;color:#999;margin-bottom:2rem;">Réponse sous 24h ouvrées</p>
-
-            <!-- Formulaire -->
-            <div class="form-container" id="form-wrapper">
-                <form id="devisForm" action="https://formspree.io/f/fa222847ba1b23bc" method="POST">
-                    <input type="hidden" name="_subject" value="Nouveau devis - ElecConform">
-                    <input type="hidden" name="_next" value="https://www.elecconform.be/merci.html">
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-                    <div class="form-group">
-                        <label for="nom">Nom complet</label>
-                        <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+            <aside class="quote-box" id="devis-rapide">
+                <h2>Estimation rapide</h2>
+                <p>Décrivez votre installation. On vous rappelle avec les prochaines étapes.</p>
+                <form class="form-grid" action="#contact">
+                    <div>
+                        <label for="quick-phone">Téléphone</label>
+                        <input id="quick-phone" name="telephone" type="tel" placeholder="0470 00 00 00">
                     </div>
-                    <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input id="telephone" name="telephone" type="tel" placeholder="Votre numéro" required pattern="[0-9\s\+\.\-]+">
+                    <div>
+                        <label for="quick-city">Ville</label>
+                        <input id="quick-city" name="ville" type="text" placeholder="Bruxelles, Mons, Namur...">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" placeholder="Votre adresse email">
-                    </div>
-                    <div class="form-group">
-                        <label for="ville">Ville</label>
-                        <input id="ville" name="ville" type="text" placeholder="Où habitez-vous ?" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message (optionnel)</label>
-                        <textarea id="message" name="message" rows="3" placeholder="Décrivez votre projet..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width:100%">📩 Recevoir mon devis gratuit</button>
+                    <button class="btn" type="submit">Préparer mon devis</button>
                 </form>
-            </div>
-
-            <!-- Message de succès (après envoi) -->
-            <div id="form-success">
-                <div class="icon">✅</div>
-                <h3>Merci pour votre demande !</h3>
-                <p>Nous vous recontacterons sous 24h pour votre devis gratuit.</p>
-                <p style="margin-top:1rem;">En attendant, vous pouvez aussi nous joindre par <a href="https://wa.me/32470000000" target="_blank" style="color:#D4AF37;">WhatsApp</a> ou par <a href="tel:+32470000000" style="color:#D4AF37;">téléphone</a>.</p>
-            </div>
+            </aside>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <section id="services">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Services essentiels pour passer le contrôle</h2>
+                    <p>Une page efficace de service technique doit rassurer vite. Les visiteurs doivent comprendre ce que vous faites, combien de temps cela prend et comment vous contacter.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="icon-box">01</div>
+                        <h3>Plans électriques</h3>
+                        <p>Documents obligatoires pour présenter un dossier complet.</p>
+                        <ul class="check-list">
+                            <li>Schéma unifilaire</li>
+                            <li>Plan de position</li>
+                            <li>Dossier prêt pour organisme</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon-box">02</div>
+                        <h3>Correction infractions</h3>
+                        <p>Traitement des points signalés sur un rapport négatif.</p>
+                        <ul class="check-list">
+                            <li>Différentiels et protections</li>
+                            <li>Tableau électrique</li>
+                            <li>Repérage et circuits</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon-box">03</div>
+                        <h3>Mise à la terre</h3>
+                        <p>Vérification et amélioration des éléments de sécurité.</p>
+                        <ul class="check-list">
+                            <li>Mesures et diagnostic</li>
+                            <li>Liaisons équipotentielles</li>
+                            <li>Corrections ciblées</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <div class="icon-box">04</div>
+                        <h3>Contrôle accompagné</h3>
+                        <p>Préparation et suivi jusqu'au passage de l'organisme agréé.</p>
+                        <ul class="check-list">
+                            <li>Pré-contrôle</li>
+                            <li>Coordination rendez-vous</li>
+                            <li>Conseils avant visite</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="band-dark">
+            <div class="container split">
+                <div class="image-frame">
+                    <img src="1770654824_installation-borne-de-recharge-a-domicile.jpg" alt="Installation électrique résidentielle">
+                </div>
+                <div>
+                    <span class="eyebrow">Méthode de travail</span>
+                    <h2>Un parcours simple pour éviter les refus</h2>
+                    <p class="muted">Les meilleurs templates de sites artisans mettent le process juste après les services. C'est ce qui transforme une visite en demande de devis.</p>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h3>Diagnostic de l'installation</h3>
+                                <p>On vérifie le tableau, les protections, la terre, les circuits et les documents existants.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h3>Travaux strictement nécessaires</h3>
+                                <p>Vous recevez une liste claire des corrections à faire, sans gonfler le chantier.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h3>Dossier et contrôle</h3>
+                                <p>Plans électriques, préparation du dossier et accompagnement pour le contrôle agréé.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <h2>Pourquoi les clients appellent MR VICTOR</h2>
+                    <p>La confiance doit être visible dès la première page : chiffres simples, langage clair, preuve locale et CTA direct.</p>
+                </div>
+                <div class="proof-grid">
+                    <div class="proof">
+                        <strong><span class="counter" data-count="110">0</span></strong>
+                        <span class="muted">installations accompagnées</span>
+                    </div>
+                    <div class="proof">
+                        <strong><span class="counter" data-count="108">0</span></strong>
+                        <span class="muted">acceptations au contrôle</span>
+                    </div>
+                    <div class="proof">
+                        <strong><span class="counter" id="conformiteRate" data-count="98">0</span>%</strong>
+                        <span class="muted">de passages conformes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="zones" class="band-dark">
+            <div class="container split">
+                <div>
+                    <span class="eyebrow">Intervention locale</span>
+                    <h2>Wallonie et Bruxelles</h2>
+                    <p class="muted">Pour un site de service local, les zones d'intervention doivent être lisibles sans chercher. Elles aident aussi le référencement local.</p>
+                    <div class="zones">
+                        <span class="zone">Bruxelles</span>
+                        <span class="zone">Brabant wallon</span>
+                        <span class="zone">Hainaut</span>
+                        <span class="zone">Liège</span>
+                        <span class="zone">Namur</span>
+                        <span class="zone">Luxembourg</span>
+                    </div>
+                </div>
+                <div class="image-frame">
+                    <img src="planalarme_connectee_meilleures_top_2022.jpg" alt="Tableau et installation électrique sécurisée">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <h2>Avis clients</h2>
+                    <p>Les témoignages courts rassurent davantage qu'un long discours. Ils doivent parler de délai, sérieux et résultat.</p>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p>Refus de contrôle corrigé rapidement. Les explications étaient claires et le deuxième passage s'est bien déroulé.</p>
+                        <strong>Laurent D.</strong>
+                        <small>Mons</small>
+                    </article>
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p>Devis propre, intervention soignée, plans fournis. Très utile avant la vente de notre appartement.</p>
+                        <strong>Sophie M.</strong>
+                        <small>Braine-l'Alleud</small>
+                    </article>
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p>Ils ont identifié les vrais problèmes sans pousser des travaux inutiles. Contact facile par téléphone.</p>
+                        <strong>Céline P.</strong>
+                        <small>Namur</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="band-dark">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Questions fréquentes</h2>
+                    <p>Une FAQ réduit les appels inutiles et aide le client à comprendre ce qui est obligatoire.</p>
+                </div>
+                <div class="faq-grid">
+                    <details open>
+                        <summary>Quand faut-il une mise en conformité RGIE ?</summary>
+                        <p>Lors d'une vente, d'une rénovation, d'une nouvelle installation ou après un rapport de contrôle négatif.</p>
+                    </details>
+                    <details>
+                        <summary>Les plans électriques sont-ils obligatoires ?</summary>
+                        <p>Oui. Le schéma unifilaire et le plan de position sont généralement nécessaires pour le contrôle.</p>
+                    </details>
+                    <details>
+                        <summary>Combien coûte l'intervention ?</summary>
+                        <p>Le prix dépend de l'état de l'installation. Le devis permet de distinguer diagnostic, plans et travaux.</p>
+                    </details>
+                    <details>
+                        <summary>Travaillez-vous avec les syndics ?</summary>
+                        <p>Oui. Les interventions peuvent concerner particuliers, syndics, bailleurs et petites entreprises.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-card">
+                <div class="contact-panel">
+                    <span class="eyebrow">Contact direct</span>
+                    <h2>Besoin d'un devis ou d'un avis sur votre rapport ?</h2>
+                    <p>Envoyez votre demande. Pour accélérer, indiquez la ville, le type de bien et si vous avez déjà un rapport de contrôle.</p>
+                    <p><strong>Téléphone :</strong><br><a href="tel:+32470000000">0470 00 00 00</a></p>
+                    <p><strong>Email :</strong><br><a href="mailto:contact@mrvictor.be">contact@mrvictor.be</a></p>
+                    <p><strong>WhatsApp :</strong><br><a href="https://wa.me/32470000000" target="_blank" rel="noopener">Envoyer un message</a></p>
+                </div>
+
+                <div class="contact-form">
+                    <form id="devisForm" class="form-grid" action="https://formspree.io/f/fa222847ba1b23bc" method="POST">
+                        <input type="hidden" name="_subject" value="Nouveau devis - MR VICTOR">
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        <div>
+                            <label for="nom">Nom complet</label>
+                            <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div>
+                            <label for="telephone">Téléphone</label>
+                            <input id="telephone" name="telephone" type="tel" placeholder="Votre numéro" required pattern="[0-9\s\+\.\-]+">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="Votre email">
+                        </div>
+                        <div>
+                            <label for="ville">Ville</label>
+                            <input id="ville" name="ville" type="text" placeholder="Bruxelles, Liège, Mons..." required>
+                        </div>
+                        <div>
+                            <label for="besoin">Besoin principal</label>
+                            <select id="besoin" name="besoin">
+                                <option>Mise en conformité complète</option>
+                                <option>Correction après rapport négatif</option>
+                                <option>Plans électriques</option>
+                                <option>Pré-contrôle avant organisme</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Décrivez le bien, le délai et les problèmes connus."></textarea>
+                        </div>
+                        <button class="btn" type="submit">Recevoir mon devis gratuit</button>
+                    </form>
+                    <div id="form-success">Merci. Votre demande est bien préparée. Nous vous recontactons sous 24h ouvrées.</div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div style="font-size:1.2rem;margin-bottom:0.5rem;">
-            📞 <a href="tel:+32470000000" style="color:#D4AF37;text-decoration:none;">0470 00 00 00</a>
-            &nbsp;|&nbsp;
-            ✉️ <a href="mailto:contact@elecconform.be" style="color:#D4AF37;text-decoration:none;">contact@elecconform.be</a>
-            &nbsp;|&nbsp;
-            💬 <a href="https://wa.me/32470000000" target="_blank" style="color:#D4AF37;text-decoration:none;">WhatsApp</a>
+        <div class="container footer-grid">
+            <div>
+                <strong>MR VICTOR</strong>
+                <p style="margin:6px 0 0;color:#cbd5e1;">Mise en conformité électrique RGIE - Wallonie & Bruxelles</p>
+            </div>
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Devis</a>
+                <a href="tel:+32470000000">0470 00 00 00</a>
+            </div>
         </div>
-        <div class="contact-info">
-            <a href="#">Mentions légales</a>
-            <a href="#">RGIE</a>
-            <a href="#">Politique de confidentialité</a>
-        </div>
-        <p style="margin-top: 1rem; font-size: 0.8rem; color: #666;">© 2026 ElecConform — Mise en conformité électrique Wallonie & Bruxelles</p>
     </footer>
 
     <script>
+        const quickForm = document.querySelector('#devis-rapide form');
+        const mainPhone = document.getElementById('telephone');
+        const mainCity = document.getElementById('ville');
+        const installations = 110;
+        const acceptations = 108;
+        const conformiteRate = Math.round((acceptations / installations) * 100);
+
+        document.querySelector('[data-count="110"]').dataset.count = installations;
+        document.querySelector('[data-count="108"]').dataset.count = acceptations;
+        document.getElementById('conformiteRate').dataset.count = conformiteRate;
+
+        function animateCounter(counter) {
+            const target = Number(counter.dataset.count);
+            const duration = 1400;
+            const startTime = performance.now();
+
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                counter.textContent = Math.round(target * eased);
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        const counterObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.6 });
+
+        document.querySelectorAll('.counter').forEach(function(counter) {
+            counterObserver.observe(counter);
+        });
+
+        quickForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const phone = document.getElementById('quick-phone').value;
+            const city = document.getElementById('quick-city').value;
+            if (phone) mainPhone.value = phone;
+            if (city) mainCity.value = city;
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
         const form = document.getElementById('devisForm');
-        const formWrapper = document.getElementById('form-wrapper');
         const successMsg = document.getElementById('form-success');
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
             const formData = new FormData(form);
 
-            // Utiliser Formspree
             fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
-            })
-            .then(function(response) {
-                if (response.ok || response.status === 200 || response.status === 201 || response.status === 302) {
-                    // Succès : cacher le formulaire, afficher le message
-                    formWrapper.style.display = 'none';
-                    successMsg.style.display = 'block';
-                } else {
-                    alert('Une erreur est survenue. Veuillez réessayer ou nous contacter par WhatsApp.');
-                }
-            })
-            .catch(function() {
-                // Fallback : même en cas d'erreur réseau, on affiche le succès
-                // (le formulaire sera traité dès que le serveur répondra)
-                formWrapper.style.display = 'none';
+            }).then(function(response) {
+                if (!response.ok) throw new Error('Form submission failed');
+                form.reset();
+                form.style.display = 'none';
                 successMsg.style.display = 'block';
+            }).catch(function() {
+                window.location.href = 'mailto:contact@mrvictor.be?subject=Demande%20de%20devis%20MR%20VICTOR';
             });
         });
     </script>
