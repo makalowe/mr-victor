@@ -3,7 +3,7 @@ import { ArrowRight, Linkedin, Mail } from "lucide-react";
 import { Logo } from "./Header";
 
 const columns = [
-  {title:"Produits",links:[["Installation de bornes électriques","/solutions-techniques"],["Recharge en déplacement","/#recharge-deplacement"],["Recharge en entreprise","/#recharge-entreprise"],["Recharge à domicile des collaborateurs","/#recharge-domicile"],["Supervision et pilotage","/solutions-techniques"],["Solutions pour vos clients","/solutions/concessionnaires"]]},
+  {title:"Produits",links:[["Installation de bornes électriques","/solutions-techniques"],["Recharge en entreprise","/#recharge-entreprise"],["Recharge à domicile des collaborateurs","/#recharge-domicile"],["Supervision et pilotage","/solutions-techniques"],["Solutions pour vos clients","/solutions/concessionnaires"]]},
   {title:"Partenariats",links:[["Réseaux de recharge","/contact"],["Installateurs de bornes","/contact"],["Concessionnaires & leasers","/solutions/concessionnaires"],["Devenir partenaire","/contact"]]},
   {title:"Ressources",links:[["Newsletter","/#newsletter"],["Blog","/ressources"],["Livres blancs","/resources/livre-blanc-monsieur-victor.pdf"],["Études de cas","/references"],["Guides pratiques","/ressources"],["FAQ","/#faq"],["Centre d’aide","/contact"]]},
   {title:"Entreprise",links:[["À propos","/a-propos"],["Notre méthode","/methode"],["Couverture géographique","/a-propos"],["Contact","/contact"],["Demander un devis","/devis"]]},

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, Car, ChevronDown, Factory, Gauge, Home, Menu, Route, Store, X } from "lucide-react";
+import { Building2, Car, ChevronDown, Factory, Gauge, Home, Menu, Store, X } from "lucide-react";
 import { useState } from "react";
 
 export function Logo() {
@@ -11,7 +11,6 @@ export function Logo() {
 const productLinks = [
   {label:"Recharge en entreprise",description:"Bornes pour sites, parkings et flottes",href:"/#recharge-entreprise",icon:Building2},
   {label:"Recharge à domicile",description:"Recharge des collaborateurs, suivie et remboursée",href:"/#recharge-domicile",icon:Home},
-  {label:"Recharge en déplacement",description:"Accès aux réseaux publics et maîtrise des coûts",href:"/#recharge-deplacement",icon:Route},
   {label:"Supervision & pilotage",description:"Utilisateurs, énergie, disponibilité et reporting",href:"/solutions-techniques",icon:Gauge},
 ];
 
