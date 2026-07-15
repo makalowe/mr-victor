@@ -1,0 +1,1 @@
+export function LegalPage({title,children}:{title:string,children:React.ReactNode}){return <article className="py-20"><div className="container max-w-3xl"><h1 className="text-5xl font-black text-navy-950">{title}</h1><div className="prose-mv mt-12">{children}</div></div></article>}

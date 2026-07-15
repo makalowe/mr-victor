@@ -1,0 +1,3 @@
+import type { MetadataRoute } from "next";
+import { articles, caseStudies, sectors } from "@/lib/content";
+export default function sitemap():MetadataRoute.Sitemap{const base=process.env.NEXT_PUBLIC_SITE_URL||"https://www.monsieur-victor.fr";const pages=["","/devis","/contact","/methode","/solutions-techniques","/references","/ressources","/a-propos","/mentions-legales","/politique-de-confidentialite","/cgv",...sectors.map(s=>`/solutions/${s.slug}`),...caseStudies.map(c=>`/references/${c.slug}`),...articles.map(a=>`/ressources/${a.slug}`)];return pages.map(url=>({url:`${base}${url}`,lastModified:new Date(),changeFrequency:url===""?"weekly":"monthly",priority:url===""?1:url==="/devis"?.9:.7}))}
